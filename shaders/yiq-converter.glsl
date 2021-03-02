@@ -2,10 +2,10 @@
 //!BIND HOOKED
 //!BIND LUMA
 
-#define TOTAL_SCALE 1.1
-#define Y_SCALE 1.0
-#define I_SCALE 1.0
-#define Q_SCALE 1.0
+#define TOTAL_SCALE 1.0
+#define Y_SCALE 1.05
+#define I_SCALE 1.15
+#define Q_SCALE 1.15
 
 const mat3 RGBtoYIQ = mat3(
     0.299,       0.587,       0.114,
