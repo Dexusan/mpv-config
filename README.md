@@ -12,6 +12,7 @@ Can be placed in `%appdata%\mpv\` or in a `.\portable_config` within the same di
 - d enables deband
 - D cycles deband settings
 - h cycles hardware decoding
+- c enables video clipping script
 ## Global Settings
 - keep mpv open when a file ends
 - use lossless webp for screenshots, saved to Pictures folder
