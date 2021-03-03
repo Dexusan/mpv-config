@@ -15,15 +15,18 @@ Can be placed in `%appdata%\mpv\` or in a `.\portable_config` within the same di
 - h cycles hardware decoding
 - c enables video clipping script
 - o cycles osc
-## Global Settings
+## Global settings
 - keep mpv open when a file ends
 - use lossless webp for screenshots, saved to Pictures folder
 - youtube-dl quality (1080p 30fps)
-- tscale settings (related to interpolation which is off by default)
-- deband settings (deband is off by default)
-## MKV Settings
-- gpu-hq profile
+- tscale settings related to interpolation which is off by default
+- deband settings, which deband is off by default
+## Video profile
+- loads gpu-hq profile
 - ewa_lanczossharp for chroma and luma upscale
 - mitchell for downscale
+- enables d3d11 hardware decoding, which is better for windows
 - fullscreen
+## MKV files
+- loads Video profile
 - audio and subtitle language preferences to prioritize japanese audio and english subtitles
