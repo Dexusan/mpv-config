@@ -23,7 +23,7 @@ Can be placed in `%appdata%\mpv\` or in a `.\portable_config` within the same di
 - deband settings (deband is off by default)
 ## MKV Settings
 - gpu-hq profile
-- ewa_lanczossharp for scale and scale
-- mitchell for dscale
+- ewa_lanczossharp for chroma and luma upscale
+- mitchell for downscale
 - fullscreen
 - audio and subtitle language preferences to prioritize japanese audio and english subtitles
