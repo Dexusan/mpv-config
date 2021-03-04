@@ -16,10 +16,11 @@ local config = {
     -- https://trac.ffmpeg.org/wiki/Encode/H.264
     preset = 'faster',
     video_format = 'mp4', -- mp4, vp9, vp8
-    video_bitrate = '1M',
+    video_bitrate = '2M',
     video_width = -2,
     video_height = 480,
-    audio_bitrate = '32k',
+    audio_codec = 'aac',
+    audio_bitrate = '128k',
     mute_audio = false,
     font_size = 24,
 }
@@ -166,6 +167,7 @@ encoder.create_videoclip = function(clip_filename)
         '--oacopts-add=application=voip',
         '--oacopts-add=compression_level=10',
         table.concat { '--ovc=', config.video_codec },
+        table.concat { '--oac=', config.audio_codec },
         table.concat { '--start=', main_menu.timings['start'] },
         table.concat { '--end=', main_menu.timings['end'] },
         table.concat { '--aid=', config.mute_audio and 'no' or mp.get_property("aid") }, -- track number
@@ -193,6 +195,7 @@ encoder.create_audioclip = function(clip_filename)
         '--oacopts-add=vbr=on',
         '--oacopts-add=application=voip',
         '--oacopts-add=compression_level=10',
+        table.concat { '--ova=', config.audio_codec },
         table.concat { '--start=', main_menu.timings['start'] },
         table.concat { '--end=', main_menu.timings['end'] },
         table.concat { '--volume=', mp.get_property('volume') },
