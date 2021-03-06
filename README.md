@@ -1,4 +1,4 @@
-# mpv_config
+# mpv-config
 My personal settings for mpv
 ## Setup
 Can be placed in `%appdata%\mpv\` or in a `.\portable_config` within the same directory as `mpv.exe`
