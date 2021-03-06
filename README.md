@@ -16,6 +16,7 @@ Can be placed in `%appdata%\mpv\` or in a `.\portable_config` within the same di
 - c enables video clipping script
 - o cycles osc
 ## Global settings
+- automatically maximize the window when opened
 - keep mpv open when a file ends
 - use lossless webp for screenshots, saved to Pictures folder
 - youtube-dl quality (1080p 30fps)
