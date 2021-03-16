@@ -16,6 +16,8 @@ You can opt to change the output path to `.\portable_config` in the same folder 
 - h cycles hardware decoding
 - c enables video clipping script
 - o cycles osc
+- a apply `anime` profile
+- A restore from `anime` profile
 ## Global settings
 - automatically maximize the window when opened
 - keep mpv open when a file ends
