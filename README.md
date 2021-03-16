@@ -3,11 +3,6 @@ My personal settings for mpv
 ## Setup
 Can be placed in `%appdata%\mpv\` or in a `.\portable_config` within the same directory as `mpv.exe`
 ## Inputs
-- F1 toggles yiq conversion shader
-- F2 toggles level shader
-- F3 toggles adaptive sharpen shader
-- F4 toggles faux-hdr shader
-- F5 is my primary set of shaders I use when watching anime which also enables interpolation
 - y cycles youtube-dl quality settings from 1080p, 720p and best quality
 - i cycles interpolation settings
 - d enables deband
@@ -20,14 +15,31 @@ Can be placed in `%appdata%\mpv\` or in a `.\portable_config` within the same di
 - keep mpv open when a file ends
 - use lossless webp for screenshots, saved to Pictures folder
 - youtube-dl quality (1080p 30fps)
-- tscale settings related to interpolation which is off by default
+- tscale settings and interpolation settings
 - deband settings, which deband is off by default
-## Video profile
-- loads gpu-hq profile
-- ewa_lanczossharp for chroma and luma upscale
-- mitchell for downscale
-- enables d3d11 hardware decoding, which is better for windows
-- fullscreen
-## MKV files
-- loads Video profile
-- audio and subtitle language preferences to prioritize japanese audio and english subtitles
+- enables d3d1 hardware deecoding and rendering, which is better for windows
+## Profiles
+### Focus
+- sets the video to fullscreen
+- hides the cursor and on screen controller
+### Anime
+- Prefer Japanese audio and English subtitles
+- loads preferred shaders
+### Simulcast
+- Automatically associates with files labled with simulcast releases
+- Sets the `anime` profile
+### Native-Scale
+- Automatically loads when the video is displayed at 1080p
+- Replaces the bilinear scale that normally gets applied
+### Upscale
+- Automatically loads when the video is displayed above 1080p
+- Sets scale to `ewa_lanczossharp`
+### Downscale
+- Automatically loads when the video is displayed below 1080p
+- Sets downscale to `mitchell`
+### Extension MKV
+- Automatically loads when mkv files are played
+- Sets the `focus` profile
+## Notes
+- specific profiles for scaling are used because mpv has a known bug that applies bilinear scaling even at natively displayed content https://github.com/mpv-player/mpv/issues/5727
+- `cscale` is not used because there is a bug (I believe that's unreported) where it gets stuck in downscale, the specified downscale profile will not override it either
