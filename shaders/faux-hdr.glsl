@@ -1,6 +1,7 @@
 //!HOOK MAIN
 //!BIND HOOKED
 //!BIND LUMA
+//!DESC faux-hdr
 
 #define saturation  1.0
 #define gamma       1.3

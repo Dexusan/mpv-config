@@ -195,7 +195,7 @@ encoder.create_audioclip = function(clip_filename)
         '--oacopts-add=vbr=on',
         '--oacopts-add=application=voip',
         '--oacopts-add=compression_level=10',
-        table.concat { '--oac=', config.audio_codec },
+        table.concat { '--ova=', config.audio_codec },
         table.concat { '--start=', main_menu.timings['start'] },
         table.concat { '--end=', main_menu.timings['end'] },
         table.concat { '--volume=', mp.get_property('volume') },

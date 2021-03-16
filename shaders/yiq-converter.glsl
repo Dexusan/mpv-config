@@ -1,6 +1,7 @@
 //!HOOK MAIN
 //!BIND HOOKED
 //!BIND LUMA
+//!DESC yiq-converter
 
 #define TOTAL_SCALE 1.3
 #define Y_SCALE 0.806

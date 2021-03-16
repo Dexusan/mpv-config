@@ -1,6 +1,7 @@
 //!HOOK MAIN
 //!BIND HOOKED
 //!BIND LUMA
+//!DESC level
 
 //default is 16
 #define BlackPoint 6
