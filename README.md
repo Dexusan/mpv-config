@@ -1,7 +1,13 @@
 # mpv-config
 My personal settings for mpv
 ## Setup
-Can be placed in `%appdata%\mpv\` or in a `.\portable_config` within the same directory as `mpv.exe`
+1. Install git https://github.com/git-guides/install-git#install-git-on-windows
+2. Open `powershell`
+3. Invoke the following command
+```bash
+git clone https://github.com/Dexusan/mpv-config.git $env:APPDATA\mpv
+```
+You can opt to change the output path to `.\portable_config` in the same folder as your `mpv.exe`
 ## Inputs
 - y cycles youtube-dl quality settings from 1080p, 720p and best quality
 - i cycles interpolation settings
