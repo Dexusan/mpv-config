@@ -3,10 +3,10 @@
 //!BIND LUMA
 //!DESC yiq-converter
 
-#define TOTAL_SCALE 1.3
-#define Y_SCALE 0.806
-#define I_SCALE 0.903
-#define Q_SCALE 0.903
+#define TOTAL_SCALE 1.0
+#define Y_SCALE 1.12
+#define I_SCALE 1.3
+#define Q_SCALE 1.2
 
 const mat3 RGBtoYIQ = mat3(
     0.299,       0.587,       0.114,
@@ -29,5 +29,6 @@ vec4 hook()
     color.r = pow(abs(color.r), offset.x);
     color.gb *= offset.yz;
     color.rgb *= YIQtoRGB;
+    color.rgb = clamp(color.rgb, 0.0, 1.0);
     return color;
 }
